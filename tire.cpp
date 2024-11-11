@@ -19,7 +19,6 @@ private:
         if (node->isEndWord) {
             words.push_back(currentWord);
         }
-        // Corrected loop to use a reference to each child pair in children map
         for (const auto& child : node->children) {
             displayAllWords(child.second, currentWord + child.first, words);
         }
